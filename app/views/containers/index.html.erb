@@ -1,2 +1,25 @@
-<h1>Containers#index</h1>
-<p>Find me in app/views/containers/index.html.erb</p>
+<h1>Containers: The Index</h1>
+
+<% @containers.each do |container| %>
+	<!-- <p><%= container.id %></p> -->
+	<h2>
+		<%= link_to container.id, container_path(container) %>
+	</h2>
+<% end %>
+
+<p>
+	<%= link_to "New Container", new_container_path() %>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,4 +24,11 @@ ActiveRecord::Schema.define(version: 20151226041533) do
     t.string   "type",              null: false
   end
 
+  create_table "containers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
