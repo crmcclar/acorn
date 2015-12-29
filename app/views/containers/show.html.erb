@@ -2,14 +2,25 @@
 	This is the container with id #<%= @container.id %>.
 </h1>
 
+<h2>Title:</h2>
 <p>
-	<strong>Title:</strong>
 	<%= @container.title %>
 </p>
 
+<h2>Text:</h2>
 <p>
-	<strong>Text:</strong>
-	<%= @container.text %>
+<%= @container.text %>
 </p>
 
+<h2>Category:</h2>
+<p>
+	<%= @container.category %>
+</p>
+
+<br/>
+<%= link_to "Edit", edit_container_path() %>
+<br/>
+<%= link_to "Delete", container_path(), method: :delete, data: { confirm: "Are you sure?" } %>
+<br/>
 <%= link_to "Back to Index", containers_path() %>
+

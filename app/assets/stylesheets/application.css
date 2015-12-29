@@ -18,11 +18,16 @@ body{
 }
 h1{
 	padding: 20px;
+	margin: 20px;
 	border:solid;
 }
 h2{ 
 	padding-left: 40px;
 }
 p{
-	text-align: center;
+	padding-left: 40px;
+}
+a{
+	padding-left: 40px;
+	font-style: italic;
 }
