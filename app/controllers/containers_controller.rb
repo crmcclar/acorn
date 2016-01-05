@@ -15,7 +15,8 @@ class ContainersController < ApplicationController
   end
 
   def create
-  	@container = Container.new(params.require(:container).permit(:title,:text,:category))
+    puts params
+  	@container = Container.new(container_params)
   	@container.save
   	redirect_to containers_path()
   end
@@ -37,6 +38,6 @@ class ContainersController < ApplicationController
 
   private
   def container_params
-    params.require(:container).permit(:title,:text,:category)
+    params.require(:container).permit(:title,:text,:category,:date)
   end
 end

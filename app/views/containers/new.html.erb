@@ -1,9 +1,26 @@
-<p>new container view</p>
+<h1>So you want a new container?</h1>
 
 <%= form_for :container, url: containers_path do |f| %>
 	<p>
-		<%= f.label :title %><br>
+		<%= f.label :title %>: 
 		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :date %>:
+		<%= f.date_select :date %>
+	</p>
+
+	<p>
+		<%= f.label :category %><br>
+		<%= check_box_tag(:exploring) %>
+		<%= label_tag(:exploring, "Splorin") %><br/>
+		<%= check_box_tag(:food) %>
+		<%= label_tag(:food, "Phud") %><br/>
+		<%= check_box_tag(:music) %>
+		<%= label_tag(:music, "Musik") %><br/>
+		<%= check_box_tag(:thoughts) %>
+		<%= label_tag(:thoughts, "Thots") %>
 	</p>
 
 	<p>
@@ -11,10 +28,7 @@
 		<%= f.text_area :text %>
 	</p>
 
-	<p>
-		<%= f.label :category %><br>
-		<%= f.text_field :category %>
-	</p>
+	
 
 	<p>
 		<%= f.submit %>
