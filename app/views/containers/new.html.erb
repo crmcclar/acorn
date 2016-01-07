@@ -13,14 +13,7 @@
 
 	<p>
 		<%= f.label :category %><br>
-		<%= check_box_tag(:exploring) %>
-		<%= label_tag(:exploring, "Splorin") %><br/>
-		<%= check_box_tag(:food) %>
-		<%= label_tag(:food, "Phud") %><br/>
-		<%= check_box_tag(:music) %>
-		<%= label_tag(:music, "Musik") %><br/>
-		<%= check_box_tag(:thoughts) %>
-		<%= label_tag(:thoughts, "Thots") %>
+		<%= f.select :category, options_for_select([['Places','Places'], ['Food','Food'], ['Music','Music'], ['Thoughts','Thoughts']]) %>
 	</p>
 
 	<p>
@@ -28,9 +21,8 @@
 		<%= f.text_area :text %>
 	</p>
 
-	
-
 	<p>
 		<%= f.submit %>
 	</p>
+
 <% end %>

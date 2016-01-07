@@ -1,6 +1,6 @@
 class ContainersController < ApplicationController
   def index
-    @containers = Container.all
+    @containers = Container.all.order(created_at: :desc)
   end
 
   def show
@@ -8,6 +8,7 @@ class ContainersController < ApplicationController
   end
 
   def new
+    puts params
   end
 
   def edit
