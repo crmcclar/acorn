@@ -1,6 +1,10 @@
 class ContainersController < ApplicationController
   def index
+    if params[:category].present?
+      @containers = Container.where(category: params[:category]).order(created_at: :desc)
+    else
     @containers = Container.all.order(created_at: :desc)
+    end
   end
 
   def show
