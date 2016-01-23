@@ -5,6 +5,7 @@ class ContainersController < ApplicationController
     else
     @containers = Container.all.order(created_at: :desc)
     end
+    @categories = Container.all.pluck(:category).uniq
   end
 
   def show
