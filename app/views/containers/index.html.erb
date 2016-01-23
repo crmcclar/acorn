@@ -12,12 +12,29 @@
 </p>
 
 
-<p>
+
+
+<% @categories.each do |category| %>
+
+	<% if not category.nil? %>
+		<%= link_to "Posts about #{category}", containers_path(category: category) %>
+	<% else %>
+		<%= link_to "Posts about absolutely nothing", containers_path(category: category) %>
+	<% end %>
+
+<% end %>
+
+
+
+
+
+
+<!-- <p>
 	<%= link_to "Posts about Food", containers_path(category: "Food") %>
 	<%= link_to "Posts about Places", containers_path(category: "Places") %>
 	<%= link_to "Posts about Thoughts", containers_path(category: "Thoughts") %>
 	<%= link_to "Posts about Music", containers_path(category: "Music") %>
-</p> 
+</p>  -->
 
 
 
