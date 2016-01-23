@@ -1,9 +1,9 @@
-<h1>Containers: The Index</h1>
+<h1>Notes on going places, doing things, eating stuff</h1>
 
 <% @containers.each do |container| %>
 	<!-- <p><%= container.id %></p> -->
 	<h2>
-		<%= link_to container.id, container_path(container) %>
+		<%= link_to container.id.to_s + " - " + container.title, container_path(container) %>
 	</h2>
 <% end %>
 
@@ -12,8 +12,12 @@
 </p>
 
 
-
-
+<p>
+	<%= link_to "Posts about Food", containers_path(category: "Food") %>
+	<%= link_to "Posts about Places", containers_path(category: "Places") %>
+	<%= link_to "Posts about Thoughts", containers_path(category: "Thoughts") %>
+	<%= link_to "Posts about Music", containers_path(category: "Music") %>
+</p> 
 
 
 

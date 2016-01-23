@@ -1,9 +1,19 @@
-<p>new container view</p>
+<h1>Make new things here</h1>
 
 <%= form_for :container, url: containers_path do |f| %>
 	<p>
-		<%= f.label :title %><br>
+		<%= f.label :title %>: 
 		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :date %>:
+		<%= f.date_select :date %>
+	</p>
+
+	<p>
+		<%= f.label :category %><br>
+		<%= f.select :category, options_for_select([['Places','Places'], ['Food','Food'], ['Music','Music'], ['Thoughts','Thoughts']]) %>
 	</p>
 
 	<p>
@@ -14,4 +24,5 @@
 	<p>
 		<%= f.submit %>
 	</p>
+
 <% end %>
