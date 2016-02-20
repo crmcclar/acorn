@@ -13,16 +13,19 @@
 
 
 
-
-<% @categories.each do |category| %>
-
-	<% if not category.nil? %>
-		<%= link_to "Posts about #{category}", containers_path(category: category) %>
+<p>
+	<% if @category_present == true %>
+		<%= link_to "All", containers_path() %>
 	<% else %>
-		<%= link_to "Posts about absolutely nothing", containers_path(category: category) %>
+		<% @categories.each do |category| %>	
+			<% if not category.nil? %>
+				<%= link_to "Posts about #{category}", containers_path(category: category) %>
+			<% else %>
+				<%= link_to "Posts about absolutely nothing", containers_path(category: category) %>
+			<% end %>
+		<% end %>		
 	<% end %>
-
-<% end %>
+</p> 
 
 
 
