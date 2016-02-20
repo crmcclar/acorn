@@ -44,6 +44,6 @@ class ContainersController < ApplicationController
 
   private
   def container_params
-    params.require(:container).permit(:title,:text,:category,:date)
+    params.require(:container).permit(:title,:text,:category,:date,:photo)
   end
 end

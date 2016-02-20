@@ -2,6 +2,8 @@
 	<%= @container.title %>
 </h1>
 
+<%= image_tag @container.photo.url %>
+
 <h2>Date:</h2>
 <p>
 	<%= @container.date.to_date %>
@@ -24,4 +26,3 @@
 <%= link_to "Delete", container_path(), method: :delete, data: { confirm: "Are you sure?" } %>
 <br/>
 <%= link_to "Back to Index", containers_path() %>
-
